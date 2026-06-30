@@ -1,0 +1,13 @@
+#Main application YAML starter
+
+spring:
+  application:
+    name: BackendApplication
+  profiles:
+    active: dev
+
+
+#configurations
+#database configurations
+#email configurations
+#oauth2configurations
