@@ -1,8 +1,8 @@
 # Development version of configurations
-server:
-  port: 8081
 
-  #database connections
+server:
+  port: 8080
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres_db
@@ -10,28 +10,11 @@ spring:
     password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
-
-#      hikari:
-#        pool-name: QuoteSharePool
-#        maximum-pool-size: 10
-#        minimum-idle: 5
-#        connection-timeout: 30000
-#        idle-timeout: 600000
-#        max-lifetime: 1800000
-#        validation-timeout: 5000
-#        leak-detection-threshold: 0
-#        initialization-fail-timeout: 1
-
-    #JPA and hibernate configurations
-    jpa:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
       hibernate:
-        ddl-auto: update
-      show-sql: true
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.PostgreSQLDialect
-          format_sql: true
-      open-in-view: false
-
-
-
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
