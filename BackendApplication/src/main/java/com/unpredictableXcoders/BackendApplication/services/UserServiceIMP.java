@@ -3,6 +3,8 @@ package com.unpredictableXcoders.BackendApplication.services;
 import com.unpredictableXcoders.BackendApplication.dtos.UserDTO;
 import com.unpredictableXcoders.BackendApplication.entities.Provider;
 import com.unpredictableXcoders.BackendApplication.entities.User;
+import com.unpredictableXcoders.BackendApplication.exceptions.BadRequestException;
+import com.unpredictableXcoders.BackendApplication.exceptions.UserAlreadyExistsException;
 import com.unpredictableXcoders.BackendApplication.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -17,12 +19,12 @@ public class UserServiceIMP implements UserService{
     private final ModelMapper modelMapper;
 
     @Override
-    public UserDTO createUser(UserDTO userDTO) throws IllegalAccessException {
+    public UserDTO createUser(UserDTO userDTO){
         if(userDTO.getEmail() == null || userDTO.getEmail().isBlank()){
-            throw new IllegalAccessException("Email is required");
+            throw new BadRequestException("Email is required");
         }
         if(userRepository.existsByEmail(userDTO.getEmail())){
-            throw new IllegalAccessException("Email already exists");
+            throw new UserAlreadyExistsException("Email already exists");
         }
 
         User user = modelMapper.map(userDTO, User.class);

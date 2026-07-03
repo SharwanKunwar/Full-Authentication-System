@@ -5,7 +5,7 @@ import com.unpredictableXcoders.BackendApplication.dtos.UserDTO;
 public interface UserService {
 
     //create user
-    UserDTO createUser(UserDTO userDTO) throws IllegalAccessException;
+    UserDTO createUser(UserDTO userDTO);
 
     // get user by email
     UserDTO getUserByEmail(String email);
