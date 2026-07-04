@@ -1,4 +1,4 @@
-package com.unpredictableXcoders.BackendApplication.entities;
+package com.unpredictableXcoders.BackendApplication.login.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

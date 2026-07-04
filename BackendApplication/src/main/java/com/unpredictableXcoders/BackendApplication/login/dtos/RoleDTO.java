@@ -1,4 +1,4 @@
-package com.unpredictableXcoders.BackendApplication.dtos;
+package com.unpredictableXcoders.BackendApplication.login.dtos;
 
 import lombok.*;
 import java.util.UUID;

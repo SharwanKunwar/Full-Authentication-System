@@ -1,6 +1,6 @@
-package com.unpredictableXcoders.BackendApplication.services;
+package com.unpredictableXcoders.BackendApplication.login.services;
 
-import com.unpredictableXcoders.BackendApplication.dtos.UserDTO;
+import com.unpredictableXcoders.BackendApplication.login.dtos.UserDTO;
 
 public interface UserService {
 

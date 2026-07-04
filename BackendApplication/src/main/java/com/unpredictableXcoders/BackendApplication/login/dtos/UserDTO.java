@@ -1,6 +1,6 @@
-package com.unpredictableXcoders.BackendApplication.dtos;
+package com.unpredictableXcoders.BackendApplication.login.dtos;
 
-import com.unpredictableXcoders.BackendApplication.entities.Provider;
+import com.unpredictableXcoders.BackendApplication.login.entities.Provider;
 import lombok.*;
 
 import java.time.Instant;

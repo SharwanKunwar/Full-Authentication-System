@@ -1,4 +1,4 @@
-package com.unpredictableXcoders.BackendApplication.config;
+package com.unpredictableXcoders.BackendApplication.login.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
