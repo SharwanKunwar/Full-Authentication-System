@@ -2,7 +2,7 @@ package com.unpredictableXcoders.BackendApplication.login.services;
 
 import com.unpredictableXcoders.BackendApplication.login.dtos.UserDTO;
 
-public interface UserService {
+public interface UserServiceHelper {
 
     //create user
     UserDTO createUser(UserDTO userDTO);

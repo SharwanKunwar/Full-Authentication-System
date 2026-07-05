@@ -1,4 +1,4 @@
-package com.unpredictableXcoders.BackendApplication.login.services;
+package com.unpredictableXcoders.BackendApplication.login.services.imps;
 
 import com.unpredictableXcoders.BackendApplication.exceptions.ResourceNotFoundException;
 import com.unpredictableXcoders.BackendApplication.login.dtos.UserDTO;
@@ -7,6 +7,7 @@ import com.unpredictableXcoders.BackendApplication.login.entities.User;
 import com.unpredictableXcoders.BackendApplication.exceptions.BadRequestException;
 import com.unpredictableXcoders.BackendApplication.exceptions.UserAlreadyExistsException;
 import com.unpredictableXcoders.BackendApplication.login.repositories.UserRepository;
+import com.unpredictableXcoders.BackendApplication.login.services.UserServiceHelper;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class UserServiceIMP implements UserService{
+public class UserServiceHelperIMP implements UserServiceHelper {
 
 
     private final UserRepository userRepository;
